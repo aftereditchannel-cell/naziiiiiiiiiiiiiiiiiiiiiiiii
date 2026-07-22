@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>امیر ❤️ نازی</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #ffc3a0 0%, #ffafbd 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  .container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+  .section {
+    display: none;
+    animation: fadeIn 0.6s ease-out;
+  }
+  .section.active {
+    display: block;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .names-header {
+    font-size: 1.5rem;
+    color: #ff4b72;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: #fff0f3;
+    padding: 10px;
+    border-radius: 50px;
+    display: inline-block;
+  }
+  h1 {
+    color: #ff4b72;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  .note {
+    font-size: 0.95rem;
+    color: #d81b60;
+    background: #fce4ec;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-right: 4px solid #ff4b72;
+  }
+  button {
+    background: linear-gradient(45deg, #ff4b72, #ff758c);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+  }
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 75, 114, 0.4);
+  }
+  .btn-telegram {
+    background: #0088cc;
+  }
+  .btn-telegram:hover {
+    box-shadow: 0 8px 20px rgba(0, 136, 204, 0.4);
+  }
+  .btn-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  }
+  .btn-instagram:hover {
+    box-shadow: 0 8px 20px rgba(220, 39, 67, 0.4);
+  }
+  .form-group {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+  label.title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ff4b72;
+    font-size: 1.1rem;
+  }
+  select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #ffb6c1;
+    background: #fff;
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+  }
+  select:focus {
+    border-color: #ff4b72;
+  }
+  .radio-group {
+    background: #fff0f3;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #ffb6c1;
+  }
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    color: #444;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  .radio-group label:last-child {
+    margin-bottom: 0;
+  }
+  .radio-group input {
+    margin-left: 12px;
+    transform: scale(1.3);
+    accent-color: #ff4b72;
+  }
+  .heart {
+    color: #ff4b72;
+    font-size: 2.5rem;
+    margin: 5px 0;
+    display: inline-block;
+    animation: heartbeat 1.2s infinite;
+  }
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.2); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.2); }
+  }
+  .plan-card {
+    background: #fff0f3;
+    border: 2px dashed #ff4b72;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+  .characters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .characters img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #ffb6c1;
+    background: white;
+  }
+  .share-title {
+    font-weight: bold; 
+    color: #d81b60; 
+    margin-top: 25px; 
+    font-size: 1.1rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+  <div class="names-header">امیر ❤️ نازی</div>
+
+  <!-- Section 1: Apology -->
+  <div id="section1" class="section active">
+    
+    <div class="characters">
+      <!-- عکس‌های شما -->
+      <img src="uploads/img1.png" alt="عکس ۱">
+      <img src="uploads/img2.png" alt="عکس ۲">
+    </div>
+
+    <h1>نازیِ عزیزم، عشقم، منو ببخش!</h1>
+    <p>می‌دونم که بد صحبت کردم و اصلا قصد نداشتم ناراحتت کنم. تو برای من خیلی باارزشی و واقعاً ازت معذرت می‌خوام که باعث شدم لبخند روی لبات از بین بره. قول میدم جبران کنم!</p>
+    
+    <div class="note">
+      شوخی شوخی: نازی جان، دوس پسر شما وسط کار آموزشگاه اومد برای شما این سایتو زد، دلشو نشکون ببخشش! 😉🥺
+    </div>
+    
+    <button onclick="nextSection(2)">آشتی آشتی، بریم بعدی 🥰</button>
+  </div>
+
+  <!-- Section 2: Planning -->
+  <div id="section2" class="section">
+    <h1>اولین دیدارمون 😍</h1>
+    <p>حالا که آشتی کردیم، قراره برای اولین بار همو ببینیم! نازی من بگو کی و کجا بریم؟</p>
+    
+    <div class="form-group">
+      <label class="title">چه روزی بریم بیرون؟</label>
+      <select id="dateSelect">
+        <option value="۲۰ مرداد">۲۰ مرداد</option>
+        <option value="۲۱ مرداد">۲۱ مرداد</option>
+        <option value="۲۲ مرداد">۲۲ مرداد</option>
+        <option value="۲۳ مرداد">۲۳ مرداد</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="title">کجا بریم؟</label>
+      <div class="radio-group">
+        <label><input type="radio" name="location" value="forest" checked> جنگل (میتینگ تو طبیعت 🌲)</label>
+        <label><input type="radio" name="location" value="cafe"> کافه‌های آمل ☕</label>
+        <label><input type="radio" name="location" value="drive"> بریم دور دور تو شهر 🚗</label>
+      </div>
+    </div>
+
+    <button onclick="showPlan()">ثبت برنامه 🚀</button>
+  </div>
+
+  <!-- Section 3: Final Plan & Share -->
+  <div id="section3" class="section">
+    <h1>برنامه ما آماده شد! 🎉</h1>
+    
+    <div class="plan-card">
+      <p id="planResult" style="font-weight: bold; color: #d81b60; font-size: 1.3rem; margin-top: 0;"></p>
+      <p id="planDetails" style="margin-bottom: 0; font-size: 1.05rem;"></p>
+    </div>
+    
+    <div class="heart">💖</div>
+    
+    <p class="share-title">روی دکمه‌های زیر بزن و نتیجه رو برای آقا امیر بفرست 👇</p>
+    
+    <button class="btn-telegram" onclick="shareToAmir('telegram')">ارسال به آقا امیر در تلگرام 💙</button>
+    <button class="btn-instagram" onclick="shareToAmir('instagram')">ارسال تو دایرکت اینستاگرام 💜</button>
+  </div>
+</div>
+
+<script>
+  let finalMessageForAmir = "";
+
+  function nextSection(num) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById('section' + num).classList.add('active');
+  }
+
+  function showPlan() {
+    const date = document.getElementById('dateSelect').value;
+    const location = document.querySelector('input[name="location"]:checked').value;
+    
+    let resultText = `قراره تو تاریخ ${date} `;
+    let detailsText = "";
+
+    if (location === 'forest') {
+      resultText += "بریم جنگل و یه میتینگ عالی تو طبیعت داشته باشیم!";
+      detailsText = "برنامه اینه: یه جای دنج تو جنگل‌های زیبای شمال پیدا می‌کنیم، زیر سایه درختا می‌شینیم. اونجا تو سفارش میدی و هر چی دوست داشتی می‌گیری، و من بجای سفارش دادن، از نگاه کردن به تو سیر میشم! 😍 یه فضای کاملا دو نفره و آرامش‌بخش.";
+    } else if (location === 'cafe') {
+      resultText += "بریم کافه‌گردی تو آمل!";
+      detailsText = "برنامه اینه: می‌ریم یکی از بهترین و دنج‌ترین کافه‌های آمل. تو منو رو می‌بینی و هر چی دلت خواست سفارش میدی، و من بجای سفارش، از نگاه کردن به تو سیر میشم! 👀❤️ تو چشمای هم نگاه می‌کنیم و اولین دیدارمونو تو یه فضای رمانتیک ثبت می‌کنیم.";
+    } else if (location === 'drive') {
+      resultText += "بریم دور دور تو شهر!";
+      detailsText = "برنامه اینه: ماشین رو برمی‌داریم، یه پلی‌لیست خفن و عاشقانه می‌ذاریم و تو خیابونای شهر دور می‌زنیم. تو مسیر هر چی خواستی می‌گیریم، تو سفارش میدی و من بجای سفارش، از نگاه کردن به تو سیر میشم! بلند بلند آهنگ می‌خونیم و حسابی لذت می‌بریم.";
+    }
+
+    document.getElementById('planResult').innerText = resultText;
+    document.getElementById('planDetails').innerText = detailsText;
+    
+    // آماده‌سازی پیام برای ارسال به امیر
+    finalMessageForAmir = `سلام امیر جان! ❤️\nمن بخشیدمت و برنامه‌مون برای اولین دیدار این شد:\n\n${resultText}\n${detailsText}\n\nعاشقتم! (نازی) 🥰`;
+    
+    nextSection(3);
+  }
+
+  function shareToAmir(platform) {
+    const encodedText = encodeURIComponent(finalMessageForAmir);
+    
+    if (platform === 'telegram') {
+      window.open(`https://t.me/share/url?url=${encodeURIComponent(' ')}&text=${encodedText}`, '_blank');
+    } else if (platform === 'instagram') {
+      // اینستاگرام اجازه ارسال مستقیم متن رو نمیده، پس متن رو کپی میکنیم و اینستاگرام رو باز میکنیم
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(finalMessageForAmir).then(() => {
+          alert("متن پیام کپی شد! ✨\nالان اینستاگرام باز میشه، فقط کافیه تو دایرکت من Paste (جایگذاری) کنی.");
+          window.open('https://www.instagram.com/direct/inbox/', '_blank');
+        }).catch(() => {
+          alert("مشکلی در کپی خودکار پیش اومد. لطفا پیام رو دستی کپی کن.");
+        });
+      } else {
+        alert("لطفا پیام رو به صورت دستی کپی کن و تو دایرکت اینستاگرام بفرست:\n\n" + finalMessageForAmir);
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
